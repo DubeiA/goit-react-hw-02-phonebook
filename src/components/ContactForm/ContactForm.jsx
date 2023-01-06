@@ -6,8 +6,8 @@ import css from "../ContactForm/ContactForm.module.css";
 export class ContactForm extends Component {
 
     state = {
-        name: 'Anatolii',
-        number: '111-22-33',
+        name: '',
+        number: '',
     }
 
       
@@ -15,12 +15,21 @@ export class ContactForm extends Component {
     const { name, value } = event.currentTarget
 
     this.setState({[name]: value})
+    
   }
 
       handleSubmit = e => { 
     e.preventDefault() 
 
-    console.log(this.state);
+        this.props.onSubmit(this.state)
+        this.reset()
+  }
+
+  reset = () => { 
+    this.setState({
+      name: '',
+      number: ''
+    })
   }
 
     render() { 

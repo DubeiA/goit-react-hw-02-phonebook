@@ -15,6 +15,11 @@
 .imputName {
   width: 150px;
   margin-left: 30px;
+  border: 2px solid rgb(0, 255, 115);
+
+  border-radius: 4px;
+
+  outline: transparent;
 }
 
 .labelNumber {
@@ -32,4 +37,12 @@
   margin-left: 30px;
   margin-top: 25px;
   border-style: none;
+
+  color: #fff;
+  background-color: cornflowerblue;
+  cursor: pointer;
+}
+
+.buttonSubmit:hover {
+  background-color: blue;
 }
